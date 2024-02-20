@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 17:36:12 by ple-stra          #+#    #+#             */
-/*   Updated: 2024/02/16 20:52:16 by ple-stra         ###   ########.fr       */
+/*   Updated: 2024/02/20 15:05:58 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ static void identify(Base &p)
 {
 	try
 	{
-		dynamic_cast<A &>(p);
+		(void)dynamic_cast<A &>(p);
 		std::cout << "Class of type 'A' identified from Base pointer."
 			<< std::endl;
 	}
@@ -73,7 +73,7 @@ static void identify(Base &p)
 	{}
 	try
 	{
-		dynamic_cast<B &>(p);
+		(void)dynamic_cast<B &>(p);
 		std::cout << "Class of type 'B' identified from Base pointer."
 			<< std::endl;
 	}
@@ -81,7 +81,7 @@ static void identify(Base &p)
 	{}
 	try
 	{
-		dynamic_cast<C &>(p);
+		(void)dynamic_cast<C &>(p);
 		std::cout << "Class of type 'C' identified from Base pointer."
 			<< std::endl;
 	}
